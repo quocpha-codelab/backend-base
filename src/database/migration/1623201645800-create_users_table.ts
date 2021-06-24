@@ -45,6 +45,8 @@ export class createUsersTable1623201645800 implements MigrationInterface {
       }),
       true,
     );
+
+    await queryRunner.query(`ALTER TABLE users ADD CONSTRAINT username_users UNIQUE (username)`);
   }
 
   async down(queryRunner: QueryRunner): Promise<void> {

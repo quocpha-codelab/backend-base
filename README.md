@@ -6,7 +6,7 @@ With express + typescript + typeORM
 Create .env file and config your environment variables
 
 ```bash
-  cp .env.example
+  cp .env.example .env
 ```
 
 Install dependencies

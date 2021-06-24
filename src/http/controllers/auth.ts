@@ -15,7 +15,7 @@ export default class UserController {
     };
 
     await validate(signInSchema, params);
-    const responseData = await authService.signIn(req.body);
+    const responseData = await authService.signIn(params);
     res.status(200).send(responseData);
   }
 }
