@@ -16,7 +16,7 @@ async function getUser(req: Request) {
   if (payload === false) return false;
   const user = await userRepository.findOne({
     where: { id: payload.userId },
-    select: ['id', 'username', 'fullName', 'status'],
+    select: ['id', 'username', 'full_name', 'status'],
   });
   if (!user) return false;
   return user;

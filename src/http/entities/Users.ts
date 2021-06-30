@@ -14,7 +14,7 @@ export default class Users {
   password: string;
 
   @Column()
-  fullName: string;
+  full_name: string;
 
   @Column()
   status: UserStatus;

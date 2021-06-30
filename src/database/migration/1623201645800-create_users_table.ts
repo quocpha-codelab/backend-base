@@ -23,7 +23,7 @@ export class createUsersTable1623201645800 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'fullName',
+            name: 'full_name',
             type: 'varchar(127)',
           },
           {

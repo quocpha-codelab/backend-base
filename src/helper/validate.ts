@@ -1,9 +1,10 @@
 import * as Joi from 'joi';
 import { abort } from './error';
 
-export const validate = async (schema: Joi.ObjectSchema<any>, data: any): Promise<void> => {
+export const validate = async (schema: Joi.ObjectSchema<any>, data: any): Promise<any> => {
   try {
-    await schema.validateAsync(data);
+    const res = await schema.validateAsync(data);
+    return res;
   } catch (error) {
     abort(400, error);
   }

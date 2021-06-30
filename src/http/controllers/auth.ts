@@ -14,8 +14,9 @@ export default class UserController {
       password: req.body.password,
     };
 
-    await validate(signInSchema, params);
-    const responseData = await authService.signIn(params);
+    const formatParams = await validate(signInSchema, params);
+
+    const responseData = await authService.signIn(formatParams);
     res.status(200).send(responseData);
   }
 }
